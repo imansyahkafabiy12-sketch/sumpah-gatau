@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #1E1B4B;
+  --color-purple: #4C1D95;
+  --color-blue: #3B82F6;
+  --color-bg-dark: #09090b;
+  --color-bg-soft: #18181b;
+  --color-glass: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.75rem;
+  }
+
+  body {
+    background-color: theme('colors.bg-dark');
+    background-image: radial-gradient(circle at top, rgba(76, 29, 149, 0.15), transparent 60%);
+    color: theme('colors.gray.200');
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: theme('colors.glass');
+    backdrop-filter: blur(12px);
+    border: 1px solid theme('colors.glass-border');
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+}
